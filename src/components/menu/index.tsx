@@ -10,6 +10,8 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import { GiHamburgerMenu } from "react-icons/gi";
+import "./menu.css"
 
 export default function Menu() {
   const [open, setOpen] = React.useState(false);
@@ -51,7 +53,9 @@ export default function Menu() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer(true)}>Menu</Button>
+      <Button onClick={toggleDrawer(true)} className='menu-icon'>
+        <GiHamburgerMenu />
+      </Button>
       <Drawer open={open} onClose={toggleDrawer(false)}>
         {DrawerList}
       </Drawer>
