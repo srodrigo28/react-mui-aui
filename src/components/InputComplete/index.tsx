@@ -9,7 +9,7 @@ export function InputComplete(){
             <Autocomplete
                 disablePortal
                 options={complete}
-                sx={{ width: 300 }}
+                className='input-full'
                 renderInput={(params) => <TextField {...params} label="Selecione Stack" />}
                 />
         </div>

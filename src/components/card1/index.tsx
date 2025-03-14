@@ -10,9 +10,14 @@ import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { useState } from 'react';
 
-export default function CardItem() {
+export default function CardItem1() {
+  const [hearts, setHearts] = useState("");
 
+  function mudarHeats(){
+      hearts === "hearts" ? setHearts("") : setHearts("hearts");
+  }
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
@@ -40,9 +45,10 @@ export default function CardItem() {
         Prepare-se para viver uma nova era de jogos com o PlayStation 5, a máquina perfeita para os apaixonados por tecnologia e entretenimento. Com gráficos impressionantes, jogabilidade ultrarrápida e recursos imersivos, o PS5 é muito mais do que um console: é o coração do universo gamer!.
         </Typography>
       </CardContent>
+      
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+        <IconButton aria-label="add to favorites" onClick={mudarHeats}>
+          <FavoriteIcon className={` ${hearts}`} />
         </IconButton>
         <IconButton aria-label="share">
           <ShareIcon />

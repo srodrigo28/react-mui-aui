@@ -1,5 +1,39 @@
+.menu-container{
+    overflow-y: hidden;
+}
 .menu-icon{
     border-radius: 50%;
     padding: 10px;
-    background-color: red;
 }
+.menu-body{
+    color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    height: 88vh;
+    overflow-y: hidden;
+}
+.menu-item{
+    flex: 1;
+}
+.menu-footer{
+    color: white;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5 all;
+
+    position: absolute;
+    bottom: 0;
+}
+.menu-footer-item{
+    color: black;
+    margin-left: 20px;
+    transition: .5 all;
+    cursor: pointer;
+}
+.menu-footer-item:hover{
+    color: red;
+}
+
